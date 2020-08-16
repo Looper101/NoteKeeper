@@ -1,0 +1,6 @@
+{
+    "files.autoSaveDelay": 500,
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "hack"
+}
