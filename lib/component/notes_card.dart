@@ -22,7 +22,9 @@ class NotesCard extends StatelessWidget {
         margin: EdgeInsets.symmetric(
             horizontal: size.width * 0.035, vertical: size.height * 0.013),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5), color: Color(0X77FFEFDD)),
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.blue,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,39 +33,35 @@ class NotesCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Expanded(
+                  flex: 2,
                   child: Text(
                     title,
-                    style: kNoteTitleTextStyle,
+                    style: kNoteTitleTextStyle.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.w500),
                   ),
                 ),
-                Text(
-                  '3: 45',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey),
+                Expanded(
+                  child: Text(
+                    '${DateTime.now()}',
+                    style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white),
+                  ),
                 )
               ],
             ),
-            Divider(
-              color: Colors.white,
-              thickness: 1,
-            ),
-            SizedBox(height: 5),
+
+            SizedBox(height: size.height * 0.02),
             Row(
               children: <Widget>[
                 Expanded(
                   flex: 2,
                   child: Text(
                     details.substring(0, details.length >= 30 ? 30 : null),
-                    style: kNoteDetailsTextStyle,
-                  ),
-                ),
-                Expanded(
-                  child: Text(
-                    '.. Read More',
-                    style: kNoteDetailsTextStyle.copyWith(fontSize: 15),
-                    textAlign: TextAlign.end,
+
+                    // details,
+                    style: kNoteDetailsTextStyle.copyWith(color: Colors.white),
                   ),
                 ),
               ],

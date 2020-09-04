@@ -2,5 +2,16 @@
     "files.autoSaveDelay": 500,
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
-    "editor.fontFamily": "hack"
+    "editor.fontFamily": "hack",
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#72b891",
+        "editorGutter.background": "#050a04",
+        "debugIcon.stepIntoForeground": "#ffffff",
+        "statusBar.background": "#000000",
+        "debugToolBar.background": "#3f107c",
+        "debugConsole.errorForeground": "#ff0000",
+        "statusBar.debuggingBackground": "#010003",
+        "editor.background": "#000000",
+        "editor.foreground": "#00ff4c"
+    }
 }

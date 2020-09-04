@@ -61,14 +61,14 @@ class _ModalBottomScreenState extends State<ModalBottomScreen> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(9)),
                   padding: EdgeInsets.symmetric(horizontal: 60, vertical: 20),
-                  color: Color(0xFFFDE509),
+                  color: Color(0xFFBB0000),
                   onPressed: () {
                     if (typedDetails == null && typedTitle == null) {
                       Navigator.pop(context);
                       return null;
                     } else {
-                      Provider.of<NoteData>(context, listen: false)
-                          .addNote(typedDetails, typedTitle);
+                      // Provider.of<NoteData>(context, listen: false)
+                      //     .addNote(typedDetails, typedTitle);
                     }
                     Navigator.pop(context);
                   },

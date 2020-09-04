@@ -12,6 +12,7 @@ class NoteCounter extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
+    var prov = Provider.of<NoteData>(context);
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 15.0),
       // height: 300.0,
@@ -49,7 +50,7 @@ class NoteCounter extends StatelessWidget {
                 ],
               ),
               child: Text(
-                Provider.of<NoteData>(context).getCount().toString(),
+                prov.getListLength().toString(),
                 style: kNoteCountTextStyle,
               ),
             ),
